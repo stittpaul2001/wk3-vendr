@@ -18,3 +18,21 @@ main {
   justify-content: start;
   align-items: end;
 }
+
+.snack-card {
+  display: flex;
+  width: 100dvh;
+  height: fit-content;
+  max-height: 60vh;
+
+}
+
+.card-image {
+  height: auto;
+  max-height: 42vh;
+  width: 100%;
+  justify-content: center;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+
+}

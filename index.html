@@ -16,25 +16,34 @@
   <!-- SECTION -->
   <header>
     <nav class="navbar bg-dark text-danger gap-2 px-2">
-      <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
-      <div><b class="fs-1 fw-bold">Week #3-Vendr</b></div>
+
+      <img src="vendinglogo.jpg" height="45" alt="" loading="lazy" class="border border-danger">
+      <div><b class="fs-1 fw-bold px-2">Week #3-Vendr</b></div>
       <div class="ms-auto" id="authstate"></div>
       </div>
+      <button class="mx-4 btn btn-primary border-light btn-lg" role="button to add quarters to"
+        onclick="app.VendingController.updateMoney(0.25)">
+      </button>
     </nav>
   </header>
 
-  <main class="container-fluid">
-    <section class="justify-content-center" id="snack-list">
-      <div class="card">
-        <div class="card-title">
-          <h1> ${this.name} </h1>
-          <img class="border-solid" src="${this.imgURL}">
+  <main class="container">
+    <section id="snackList" class="row justify-content-center">
+      <!-- //STUB - Snack List template -->
+      <!-- <div class="col-md-4">
+        <div class="card snack-card shadow bg-dark text-bg-warning">
+          <img class="border border-bg-dark  card-image" src="cookie.avif">
+          <div class="card-body text-end">
+            <div class="card-title text-center">
+              <h1 class="text-start fw-bold "> Cookie </h1>
+              <hr>
+            </div>
+            <div class="text-start fs-2">Price $2.75</div>
+            <button class="btn btn-dark border border-danger" role="button">Buy</button>
+          </div>
         </div>
-      </div>
-
+      </div> -->
     </section>
-
-
   </main>
 
   <footer class="text-bg-dark">

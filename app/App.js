@@ -1,5 +1,6 @@
 import { ExampleController } from './controllers/ExampleController.js';
 import { SnacksController } from './controllers/SnacksController.js';
+import { vendingController } from './controllers/VendingController.js';
 
 class App {
 
@@ -7,7 +8,7 @@ class App {
 
   SnacksController = new SnacksController()
 
-
+  VendingController = new vendingController()
 
 }
 
