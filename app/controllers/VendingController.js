@@ -8,17 +8,12 @@ export class vendingController {
   }
 
 
-  addQuarter() {
-    vendingService.addQuarter()
-    this.addQuarter()
-  }
-
   updateMoney(amount) {
-    vendingService.addQuarter(amount)
+    vendingService.increaseMoney(amount)
   }
 
   drawMoney() {
-    const moneyElm = document.createElement('money')
+    const moneyElm = document.getElementById('money')
     const money = AppState.money.toFixed(2)
     moneyElm.innerText = `$${money.toString()}`
   }

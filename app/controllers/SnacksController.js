@@ -22,10 +22,10 @@ export class SnacksController {
     console.log('drawing snack', snacks)
   }
 
-  setSnacks(snackName) {
-    snacksService.setSnacks(snackName)
-  }
 
+  buySnack() {
+
+  }
 
 
 

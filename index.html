@@ -14,16 +14,14 @@
 
 <body data-bs-theme="light">
   <!-- SECTION -->
-  <header>
+  <header class="sticky-top">
     <nav class="navbar bg-dark text-danger gap-2 px-2">
-
       <img src="vendinglogo.jpg" height="45" alt="" loading="lazy" class="border border-danger">
       <div><b class="fs-1 fw-bold px-2">Week #3-Vendr</b></div>
       <div class="ms-auto" id="authstate"></div>
       </div>
-      <button class="mx-4 btn btn-primary border-light btn-lg" role="button to add quarters to"
-        onclick="app.VendingController.updateMoney(0.25)">
-      </button>
+      <button onclick="app.VendingController.updateMoney(0.25)" class="btn btn-primary border-light btn-lg">Increase
+        funds by $0.25</button>
     </nav>
   </header>
 
@@ -46,7 +44,17 @@
     </section>
   </main>
 
-  <footer class="text-bg-dark">
+  <footer class="text-bg-dark sticky-bottom">
+    <section class="container-fluid fs-2">
+      <div class="row bg-primary">
+        <div class="col-md-8">
+          <p class="fw-bold fs-2 text-end">Total Funds:
+            <span class="fw-bold fs-2" id="money">$0.00</span>
+          </p>
+        </div>
+      </div>
+
+    </section>
     <div class="text-center">
       <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by This Brown Dude</small></p>
     </div>

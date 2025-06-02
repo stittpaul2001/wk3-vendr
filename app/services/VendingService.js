@@ -4,9 +4,10 @@ import { AppState } from "../AppState.js"
 class VendingService {
 
 
-  addQuarter(amount) {
-    const updateMoney = AppState.money
+  increaseMoney(amount) {
+    const money = AppState.money
     AppState.money += amount
+    console.log('adding money!')
   }
 
 
