@@ -10,6 +10,7 @@ export class vendingController {
 
   updateMoney(amount) {
     vendingService.increaseMoney(amount)
+
   }
 
   drawMoney() {

@@ -6,8 +6,9 @@ import { snacksService } from "../services/SnacksService.js"
 export class SnacksController {
   constructor() {
     AppState.on('money', this.drawSnacks)
+
     //NOTE - helps me know that my controller is linked in within my file
-    console.log('SnacksController')
+    // console.log('SnacksController')
     this.drawSnacks()
   }
 
@@ -24,13 +25,11 @@ export class SnacksController {
   }
 
 
-  buySnack(snackName) {
-    const money = AppState.money
-    snacksService.buySnack(snackName)
-
+  buySnack(snackPrice) {
+    snacksService.buySnack(snackPrice)
     console.log('food bought')
-
   }
+
 
 
 }

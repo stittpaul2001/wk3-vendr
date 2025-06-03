@@ -1,3 +1,5 @@
+import { AppState } from "../AppState.js";
+
 // Snack.js
 export class Snack {
   constructor(data) {
@@ -23,21 +25,15 @@ export class Snack {
               <h1 class="text-start fw-bold"> ${this.name} </h1>
                 <hr>
             </div>
-          <div class="text-start fs-2">$${this.price}</div>
-          <button onclick="app.SnacksController.buySnack('${this.name}')" ${this.updateButton()} class=" btn btn-dark btn-border border-danger" role="button" title="click to purchase a ${this.name}">Buy</button>
+          <div class="text-start fs-2 money">$${this.price}</div>
+          <button onclick="app.SnacksController.buySnack('${this.price}')" class="btn btn-dark btn-border border-danger" role="button" title="click to purchase a ${this.name}" >Buy </button>
         </div>
       </div >
     </div >
       `
   }
 
-  updateButton() {
-    const money = this.price
-    if (this.price > money) {
-      return 'disabled'
-    }
-    return ''
-  }
+
 
 
 
