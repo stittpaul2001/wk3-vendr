@@ -1,10 +1,11 @@
 import { AppState } from "../AppState.js"
+import { Snack } from "../models/Snack.js"
 import { snacksService } from "../services/SnacksService.js"
 
 
 export class SnacksController {
   constructor() {
-
+    AppState.on('money', this.drawSnacks)
     //NOTE - helps me know that my controller is linked in within my file
     console.log('SnacksController')
     this.drawSnacks()
@@ -19,15 +20,17 @@ export class SnacksController {
     snacks.forEach(snacks => snacksContent += snacks.snackCard)
     const snackListElm = document.getElementById('snackList')
     snackListElm.innerHTML = snacksContent
-    console.log('drawing snack', snacks)
-  }
-
-
-  buySnack() {
 
   }
 
 
+  buySnack(snackName) {
+    const money = AppState.money
+    snacksService.buySnack(snackName)
+
+    console.log('food bought')
+
+  }
 
 
 }
