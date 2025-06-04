@@ -1,5 +1,4 @@
 import { AppState } from "../AppState.js"
-import { Snack } from "../models/Snack.js"
 import { snacksService } from "../services/SnacksService.js"
 
 

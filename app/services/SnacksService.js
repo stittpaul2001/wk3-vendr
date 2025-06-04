@@ -1,6 +1,4 @@
 import { AppState } from "../AppState.js"
-import { SnacksController } from "../controllers/SnacksController.js"
-import { Snack } from "../models/Snack.js"
 
 
 class SnacksService {
