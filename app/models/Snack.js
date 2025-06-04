@@ -8,13 +8,6 @@ export class Snack {
     this.imgUrl = data.imgUrl;
   }
 
-  name = ''
-  price = ' '
-  imgUrl = ''
-
-
-
-
   get snackCard() {
     return /*html*/`
     <div class="col-md-4">
@@ -26,14 +19,21 @@ export class Snack {
                 <hr>
             </div>
           <div class="text-start fs-2 money">$${this.price}</div>
-          <button onclick="app.SnacksController.buySnack('${this.price}')" class="btn btn-dark btn-border border-danger" role="button" title="click to purchase a ${this.name}" >Buy </button>
+          <button onclick="app.SnacksController.buySnack('${this.price}')" ${this.buttonDisabled} class="btn btn-dark btn-border border-danger" role="button" title="click to purchase a ${this.name}" >Buy </button>
         </div>
       </div >
     </div >
       `
   }
 
+  get buttonDisabled() {
+    const money = AppState.money
+    if (this.price > money) {
+      return 'disabled'
 
+    }
+    return ''
+  }
 
 
 
